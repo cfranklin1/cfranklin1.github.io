@@ -6,15 +6,19 @@ h1, h2, a, p, .my-projects{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-
+    
 
 }
+.nav-container img:hover{
+    animation: effect 0.4s infinite;
+}
+
 .nav-container{
     background-image: url(https://cdn.pixabay.com/photo/2019/08/26/12/32/feather-4431599_1280.jpg);
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 5px;
+    padding: .5rem;
     
 
 }
@@ -22,65 +26,120 @@ a{
     background-color: black;
     color: whitesmoke;
     text-decoration: none;
-    padding: 10px;
+    padding: 1rem;
     border-radius: 25%;
+}
+ nav a:hover{
+    background-color: thistle;
+    color: black;
+    font-size:1.5rem;
+    animation: effect 0.4s infinite;
+}
+footer a:hover{
+    font-size: 2rem;
 }
 h1{
     background-color:black ;
     padding: 3px;
     color:whitesmoke;
     border-radius: 25%;
-    font-size:30px ;
+    font-size: 1.5rem;
 }
 body{
     background-image: url(https://cdn.pixabay.com/photo/2020/04/08/16/32/keyboard-5017973_1280.jpg);
+    background-size: cover;
 }
 .main-content{
+    
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 0px;
+    margin: 0;
+    padding: 5px;
 }
+.main-content button{
+    margin: 0;
+    
+}
+
 h2{
-    font-size: 50px;
+    font-size: 4rem;
     color:whitesmoke;
+    margin-left: 1rem;
 }
 button{
-    width: 125px;
-    height: 50px;
+    border: 2px solid whitesmoke;
+    box-shadow: 5px 5px 5px rgb(66, 8, 68);
+    width: 8rem;
+    padding: 1rem;
     background-color: black;
     color: whitesmoke;
-    font-size: 20px;
-    border-radius: 30%;
+    font-size: 15px;
+    border-radius: 25%;
+    
+    text-align: center;
 }
+button:hover{
+    background-color: rgb(62, 15, 68);
+    box-shadow: 5px 5px 5px rgb(227, 220, 228);
+    animation: effect 0.4s infinite;
+    width: 10rem;
+    font-size:2rem;
+}
+@keyframes effect { 
+    0% { 
+        transform: translateX(0px) rotate(0deg); 
+    } 
+
+    20% { 
+        transform: translateX(-4px) rotate(-4deg); 
+    } 
+
+    40% { 
+        transform: translateX(-2px) rotate(-2deg); 
+    } 
+
+    60% { 
+        transform: translateX(4px) rotate(4deg); 
+    } 
+
+    80% { 
+        transform: translateX(2px) rotate(2deg); 
+    } 
+
+    100% { 
+        transform: translateX(0px) rotate(0deg); 
+    } 
+} 
 /*project page*/
 .project-container{
     background-color: black;
+    border: 1px solid whitesmoke;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    padding: 2rem;
+    margin: 0 auto;
+    width: 80%;
     
+
 }
 .my-projects img{
     width: 200px;
-    height: 150px;
-    padding-right: 50px;
-     
-    
+ 
 }
 .my-projects{
     color: whitesmoke;
-    display: flexbox;
-    align-items: center;
-    justify-content: center;
+    text-align:center;
+    margin: .5rem;
+    
     
 }
 .caption    {
-    display: block;
-    text-align: flex-start;
+    
+    text-align: center;
     margin-bottom: 50px;
 }
 p{
@@ -97,13 +156,56 @@ footer{
     flex-direction: column;
     align-content: center;
     justify-content: center;
-}
-footer button{
-    border-radius: 30%;
-    size: 50px;
+    min-width:50%;
+    
 }
 
+
 .about-text{
+    border: 1px solid whitesmoke;
     text-align: center;
-    padding: 100px;
+    padding: 5rem;
 }
+
+/*media queries */
+
+@media only screen and (max-width: 800px) {
+    .footer-text{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    footer button, .main-content button{
+        box-shadow: 5px 5px 5px 5px rgb(66, 8, 68);
+        border-radius: 30%;
+        size: 50px;
+    }
+ 
+    .project-container{
+        max-width: 100%;
+    }
+  }
+@media only screen and (max-width: 520px) {
+    h2{
+        font-size: 3rem;
+    }
+    h1{
+        font-size: 1rem;
+    }
+    
+    a{
+        padding: .5rem;
+        border-radius: 25%;
+    }
+   
+   .project-container{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+   }
+
+  }
