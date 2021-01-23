@@ -2,53 +2,64 @@
 h1, h2, a, p, .my-projects{
     font-family: monospace;
 }
+
 .nav-container img{
-    width: 40px;
-    height: 40px;
+    width: 2rem;
+    max-width: 100%;
     border-radius: 50%;
-    
+    padding: 0;
 
 }
 .nav-container img:hover{
-    animation: effect 0.4s infinite;
+    animation: effect 0.8s infinite;
+    width: 2.5rem;
+    
 }
 
 .nav-container{
     background-image: url(https://cdn.pixabay.com/photo/2019/08/26/12/32/feather-4431599_1280.jpg);
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: .5rem;
+    width: 100%;
     
-
 }
 a{
+    font-size: 1.2rem;
     background-color: black;
     color: whitesmoke;
     text-decoration: none;
-    padding: 1rem;
+    padding: .8rem;
     border-radius: 25%;
 }
+.nav-container a{
+    border: 1px solid whitesmoke;
+}
  nav a:hover{
-    background-color: thistle;
-    color: black;
-    font-size:1.5rem;
-    animation: effect 0.4s infinite;
+    text-transform: uppercase;
+    border: 3px solid whitesmoke;
+    font-weight: bold;
+    font-size: 2rem;
+    
 }
 footer a:hover{
     font-size: 2rem;
+    font-weight: bold;
 }
 h1{
-    background-color:black ;
-    padding: 3px;
+    background-color:black;
+    padding: .5rem;
     color:whitesmoke;
-    border-radius: 25%;
-    font-size: 1.5rem;
+    border-radius: 10%;
+    font-size: 2.2rem;
 }
 body{
     background-image: url(https://cdn.pixabay.com/photo/2020/04/08/16/32/keyboard-5017973_1280.jpg);
-    background-size: cover;
+    background-size: auto auto;
 }
+
 .main-content{
     
     display: flex;
@@ -64,55 +75,67 @@ body{
 }
 
 h2{
-    font-size: 4rem;
+    font-size: 3rem;
     color:whitesmoke;
+    margin-top: 5rem;
     margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
 }
 button{
-    border: 2px solid whitesmoke;
+    border: 3px solid whitesmoke;
     box-shadow: 5px 5px 5px rgb(66, 8, 68);
     width: 8rem;
-    padding: 1rem;
+    padding: .8rem;
+    margin: .5rem;
     background-color: black;
     color: whitesmoke;
-    font-size: 15px;
-    border-radius: 25%;
-    
+    font-size: 1rem;
+    border-radius: 15%;
     text-align: center;
 }
 button:hover{
-    background-color: rgb(62, 15, 68);
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
     box-shadow: 5px 5px 5px rgb(227, 220, 228);
-    animation: effect 0.4s infinite;
-    width: 10rem;
-    font-size:2rem;
+    width: 12rem;
+    animation: effect 2.5s infinite;
+    padding: .5rem;
+    margin-top: 1rem;
+    
+
 }
-@keyframes effect { 
-    0% { 
-        transform: translateX(0px) rotate(0deg); 
-    } 
+@keyframes effect
+{
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+}
 
-    20% { 
-        transform: translateX(-4px) rotate(-4deg); 
-    } 
-
-    40% { 
-        transform: translateX(-2px) rotate(-2deg); 
-    } 
-
-    60% { 
-        transform: translateX(4px) rotate(4deg); 
-    } 
-
-    80% { 
-        transform: translateX(2px) rotate(2deg); 
-    } 
-
-    100% { 
-        transform: translateX(0px) rotate(0deg); 
-    } 
-} 
-/*project page*/
+/*----project page----*/
 .project-container{
     background-color: black;
     border: 1px solid whitesmoke;
@@ -123,8 +146,6 @@ button:hover{
     padding: 2rem;
     margin: 0 auto;
     width: 80%;
-    
-
 }
 .my-projects img{
     width: 200px;
@@ -145,7 +166,10 @@ button:hover{
 p{
     color: whitesmoke;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    padding: 1rem;
 }
+
 footer{
     background-color:black;
     margin: 50px;
@@ -157,7 +181,8 @@ footer{
     align-content: center;
     justify-content: center;
     min-width:50%;
-    
+    padding: 1rem;
+
 }
 
 
@@ -167,9 +192,12 @@ footer{
     padding: 5rem;
 }
 
-/*media queries */
+/*---------media queries---------------------- */
 
 @media only screen and (max-width: 800px) {
+    h2{
+        margin: 1rem;
+    }
     .footer-text{
         display:flex;
         flex-direction: column;
@@ -179,20 +207,18 @@ footer{
     }
     footer button, .main-content button{
         box-shadow: 5px 5px 5px 5px rgb(66, 8, 68);
-        border-radius: 30%;
+        
         size: 50px;
     }
  
-    .project-container{
-        max-width: 100%;
-    }
+    
   }
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 600px) {
     h2{
         font-size: 3rem;
     }
     h1{
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     
     a{
@@ -200,12 +226,70 @@ footer{
         border-radius: 25%;
     }
    
+    p{
+        font-size: .8rem;
+        background-color: black;
+        padding: 0;
+
+    }
+    button{
+        font-size: .8rem;
+        width: 6rem;
+        padding: .5rem;
+        
+        
+    }
    .project-container{
     display: flex;
     text-align: center;
     flex-wrap: wrap;
-    justify-content: center;
-    width: 80%;
+    align-items: center;
+    justify-content: space-around;
+    
    }
+  
 
   }
+
+  @media only screen and (max-width: 560px) {
+    h2{
+        
+        margin-top: 2.5rem;
+    }
+    h1{
+        font-size: 1.5rem;
+        padding: 0;
+    }
+    
+    a{  
+        background-color: black;
+        color: whitesmoke;
+        text-decoration: none;
+        padding: 0;
+        border-radius: 25%;
+        font-size: 1rem;
+    }
+    button{
+        border: 2px solid whitesmoke;
+        border-radius: 15%;
+        font-size: .5rem;
+        width: 4rem;
+        padding: .2rem;
+        
+        
+    }
+    .nav-container a{
+        border: none;
+    }
+    footer a{
+        margin: .2rem;
+    }
+
+    .my-projects img{
+        width: 100px;
+     
+    }
+}
+@media only screen and (max-width: 400px)   {
+ 
+}
