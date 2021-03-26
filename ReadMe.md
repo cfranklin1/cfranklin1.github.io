@@ -1,4 +1,4 @@
-A clone of User-Interface-II project
+A clone of my User-Interface-II project
 
 Camille Franklin - Portfolio
 
