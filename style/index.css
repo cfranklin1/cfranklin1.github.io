@@ -1,1 +1,109 @@
 /* Add CSS styling here */
+h1, h2, a, p, .my-projects{
+    font-family: monospace;
+}
+.nav-container img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+
+}
+.nav-container{
+    background-image: url(https://cdn.pixabay.com/photo/2019/08/26/12/32/feather-4431599_1280.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    
+
+}
+a{
+    background-color: black;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 25%;
+}
+h1{
+    background-color:black ;
+    padding: 3px;
+    color:whitesmoke;
+    border-radius: 25%;
+    font-size:30px ;
+}
+body{
+    background-image: url(https://cdn.pixabay.com/photo/2020/04/08/16/32/keyboard-5017973_1280.jpg);
+}
+.main-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px;
+}
+h2{
+    font-size: 50px;
+    color:whitesmoke;
+}
+button{
+    width: 125px;
+    height: 50px;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 20px;
+    border-radius: 30%;
+}
+/*project page*/
+.project-container{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+}
+.my-projects img{
+    width: 200px;
+    height: 150px;
+    padding-right: 50px;
+     
+    
+}
+.my-projects{
+    color: whitesmoke;
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    
+}
+.caption    {
+    display: block;
+    text-align: flex-start;
+    margin-bottom: 50px;
+}
+p{
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+footer{
+    background-color:black;
+    margin: 50px;
+
+}
+.footer-text{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+footer button{
+    border-radius: 30%;
+    size: 50px;
+}
+
+.about-text{
+    text-align: center;
+    padding: 100px;
+}
